@@ -1,0 +1,17 @@
+{
+    "name": "shibainu/lara_0804_p",
+    "autoload": {
+        "psr-4": {
+            "Shibainu\\Lara0804P\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "3A832057",
+            "email": "qoooppadsl@gmail.com"
+        }
+    ],
+    "require": {
+        "nesbot/carbon": "^2.53"
+    }
+}
