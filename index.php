@@ -3,6 +3,13 @@
 require __DIR__.'/bootstrap.php';
 require __DIR__.'/vendor/autoload.php';
 
+use Carbon\Carbon;
+   echo "目前國際標準時間：".Carbon::now()->toDayDateTimeString();
+   echo "<br>";
+   echo "目前台灣標準時間：". Carbon::now()->addHour(8)."<br>";
+   echo "建造時間(台灣)：".Carbon::createFromFormat('Y-m-d H:i:s','2021-10-13 02:15:08')."<br>";
+   echo Carbon::createFromFormat('Y-m-d H:i:s','2021-10-12 18:15:08' )->diffForHumans()."產生";
+
 // connect to dabase
 try {
     $dsn = 'mysql:host='.DB_HOST.';port='.DB_PORT.';dbname='.DB_DATABASE.';charset='.DB_CHARSET;
